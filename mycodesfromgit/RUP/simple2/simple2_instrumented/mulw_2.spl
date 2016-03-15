@@ -10,7 +10,7 @@ int mul(int n)
   int multiplicationcost = 3;
   int comparisoncost = 2;
   
-
+//
   while(i <= n){
    C = C + comparisoncost; // increment C variable for comparison 
    g = g * 1;
