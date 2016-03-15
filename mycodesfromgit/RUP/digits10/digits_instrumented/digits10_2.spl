@@ -1,0 +1,45 @@
+/*@ rel_out \result <= \other \result @*/
+
+int f(int n) {
+  int result = 1;
+  int b = 1;
+  int retval = -1;
+  int C = 0;
+  int comparisoncost = 2;
+  int divisioncost = 4;
+  int pluscost = 1;
+
+  while (!(b == 0)) {
+    C = C + comparisoncost; //increment C for comparison
+    C = C + comparisoncost; //increment C for comparison
+    if (n<10) { C = C + comparisoncost; //increment C for comparison 
+              retval = result; 
+              b = 0; }
+    else 
+    if (n<100) { C = C + comparisoncost; //increment C for comparison 
+               retval = result+1; 
+               C = C + pluscost; //increment C for addition       
+               b = 0; }
+    else 
+    if (n<1000) { C = C + comparisoncost; //increment C for comparison 
+                  retval = result+2;
+                  C = C + pluscost; //increment C for addition
+                  b = 0; }
+    else 
+    if (n<10000) { C = C + comparisoncost; //increment C for      	comparison        retval = result+3;
+                   C = C + pluscost; //increment C for addition
+                   b = 0; }
+    else {
+      C = C + comparisoncost; //increment C for else
+      n = n / 10000;
+      C = C + divisioncost; //increment C for division 
+      result = result + 4;
+      C = C + pluscost; //increment C for addition
+    }
+    C = C + comparisoncost; //increment C for exit loop
+  }
+  C = C + comparisoncost; //increment C for exit loop
+  C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+

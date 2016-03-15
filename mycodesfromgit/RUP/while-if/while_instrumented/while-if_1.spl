@@ -1,0 +1,23 @@
+int f(int t, int c) {
+  int x = 0;
+  int C = 5;
+  int comparisoncost = 2;
+  int pluspluscost = 1;
+  int minuscost = 1;
+
+  if(0 < t) {
+    C = C + comparisoncost; //increment C for comparison
+    while(0 < c) {
+      C = C + comparisoncost; //increment C for comparison
+      x++;
+      C = C + pluspluscost; //increment C for increment
+      c = c - 1;
+      C = C + minuscost; //increment C for subtraction
+    }
+    C = C + comparisoncost; //increment C for exit loop
+    }
+   C = C + comparisoncost; //increment C for exit loop
+
+  return C;
+}
+

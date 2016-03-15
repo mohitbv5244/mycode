@@ -1,0 +1,49 @@
+int tunedloopfusion(int n1, int n2, int *a, int *b, int *d){
+
+   int i = 0;
+   int C = 0;
+   int x = 1;
+   int y = 1;
+   int pluscost= 1;
+   int multiplicationcost = 3;
+   int pluspluscost = 1;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int readingcost = 2;
+
+      while(i < n1){
+           C = C + comparisoncost;//increment C for comparison
+           d[i] = x * a[i] + b[i];
+           C = C + readingcost;//increment C for reading in an array
+           C = C + pluscost;//increment C for addition
+           C = C + readingcost;//increment C for reading in an array
+           C = C + multiplicationcost;//increment C for multiplication
+           C = C + assigncost;//increment C for assigning in an array
+           i++;
+           C = C + pluspluscost;//increment C for increment
+      }
+      C = C + comparisoncost;//increment C for exit loop
+
+     i = 0;
+     while(i < n2){
+           C = C + comparisoncost;//increment C for comparison
+           d[i] = y + a[i] * b[i];
+           C = C + readingcost;//increment C for reading in an array
+           C = C + multiplicationcost;//increment C for multiplication
+           C = C + readingcost;//increment C for reading in an array
+           C = C + pluscost;//increment C for addition
+           C = C + assigncost;//increment C for assigning in an array
+           i++;
+           C = C + pluspluscost;//increment C for increment
+      }
+    C = C + comparisoncost;//increment C for exit loop
+
+    return C;
+}
+
+
+
+
+
+
+

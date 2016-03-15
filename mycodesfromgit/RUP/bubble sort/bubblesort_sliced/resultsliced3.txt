@@ -1,0 +1,8 @@
+Elapsed Time: 11.549 seconds
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) :- (((((((((((((F + S) - D) >= -2), (E =< 0)), ((G + ((8 * I) + (J + ((3 * K) + ((5 * L) + (8 * M)))))) >= 34)), ((G + ((6 * I) + (J + ((2 * K) + ((4 * L) + (6 * M)))))) >= 26)), ((G + ((5 * I) + ((2 * K) + (L + (6 * M))))) >= 19)), ((G + ((5 * I) + ((2 * K) + ((7 * M) + (((-5 * V) + (-2 * Y)) - T))))) >= 7)), ((G + ((3 * I) + (K + ((4 * M) + (((-3 * V) - Y) - T))))) >= 4)), ((G + ((3 * I) + (K + (4 * M)))) >= 11)), ((G + (I + (M + ((-1 * T) - V)))) >= 1)), (R =< 0)), (((-1 * T) - V) >= -2)).
+inv2(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) :- ((D + ((-1 * E) - F)) >= 2).
+inv3(A,B,C,D,E,F,G,H,I,J,K,L,M) :- (E =< F).
+inv4(A,B,C,D,E,F,G,H,I,J,K,L,M) :- false.
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

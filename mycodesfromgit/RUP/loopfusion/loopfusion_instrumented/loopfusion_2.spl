@@ -1,0 +1,33 @@
+/*@ rel_out \result <= \other \result @*/
+
+int loopfusion2(int n, int *a, int *b, int *c, int *d){
+
+int i = 0;
+int C = 0;
+int pluscost= 1;
+int multiplicationcost = 3;
+int pluspluscost = 1;
+int comparisoncost = 2;
+int assigncost = 2;
+
+  
+      while(i < n){
+           C = C + comparisoncost;//increment C for comparison
+           a[i] = b[i] + 1;
+           C = C + pluscost;//increment C for addition
+           C = C + assigncost;//increment C for assigning in an array
+           c[i] = a[i] * 2;
+           C = C + multiplicationcost;//increment C for multiplication
+           C = C + assigncost;//increment C for assigning in an array
+           d[i] = 1 + c[i+1];
+           C = C + pluscost;//increment C for addition
+           C = C + assigncost;//increment C for assigning in an array
+           C = C + pluscost;//increment C for addition
+           i++;
+           C = C + pluspluscost;//increment C for increment
+      }
+   C = C + comparisoncost;//increment C for exit loop
+  
+  return C;
+}
+

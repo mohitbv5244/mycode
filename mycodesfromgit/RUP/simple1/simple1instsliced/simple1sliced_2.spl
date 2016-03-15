@@ -1,0 +1,27 @@
+/*@ rel_out \result <= \other \result @*/
+
+int add(int n)
+{
+  int i = 1;
+  int g = 0;
+  int f = 10;
+  int C = 0;
+  int pluspluscost = 1;
+  int minusminuscost = 1;
+  int comparisoncost = 2;
+  int pluscost = 1;
+
+  
+
+  while(i < n){
+   C = C + comparisoncost; // increment C variable for comparison
+   //g = g + 1;
+   C = C + pluscost; //increment C variable for addition
+   //i++;
+   C = C + pluspluscost; //increment C variable for increment
+   //f--;
+   C = C + minusminuscost; //increment C variable for decrement
+   }
+   C = C + comparisoncost; // increment C variable for exit loop
+ return C;
+}

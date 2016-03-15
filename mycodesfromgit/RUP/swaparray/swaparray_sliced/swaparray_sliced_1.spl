@@ -1,0 +1,22 @@
+
+int swap(int *a, int *b, int n) {
+   int i = 0;
+   int t = 0;
+   int C = 0;
+   int pluspluscost = 1;
+   int assigncost = 2;
+   int comparisoncost = 2;
+
+   while(i < n) {
+      C = C + comparisoncost; // increment C variable for comparison
+      //t = a[i];
+      //a[i] = b[i];
+      C = C + assigncost; // increment C variable for assigning in an array      
+      //b[i] = t;
+      i++;
+      C = C + pluspluscost; //increment C variable for increment
+   }
+   C = C + comparisoncost; // increment C variable for exit
+   return C;
+}
+

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include "original_program_1.h"
+#include "original_program_2.h"
+#include <assert.h>
+
+int main(int argc, char *argv[])
+{
+int n = 5, i = 0;
+static int a[5] = {2,3,4,5,6};
+
+int *sel1;
+int *sel2;
+
+sel1 = selsort1(&a, n);
+sel2 = selsort2(&a, n);
+
+for(i = 0; i < n; i++){
+printf("%d,%d\n",i,sel1[i]);
+printf("%d,%d\n",i,sel2[i]);
+}
+
+
+assert(*sel1 == *sel2);
+//free(sel1);
+//free(sel2);
+return 0;
+}

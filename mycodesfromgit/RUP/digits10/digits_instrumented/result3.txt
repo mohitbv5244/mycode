@@ -1,0 +1,8 @@
+Elapsed Time: 1.502 seconds
+unsat
+
+0: FALSE -> 1
+1: INV1(0, 1, 4, 2, 4, 1, 9, 1, 0, 1, 8, 2, 4, 1) -> 2
+2: INV1(0, 1, 4, 2, 4, 1, 9, 1, 1, -1, 0, 2, 4, 1)
+
+Verdict: A DIFFERENCE between the two programs has been detected!

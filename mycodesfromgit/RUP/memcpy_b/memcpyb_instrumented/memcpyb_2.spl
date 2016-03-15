@@ -1,0 +1,29 @@
+/*@ rel_out \result <= \other \result @*/
+
+int memcpy(int *dest, int *src, int size) {
+   
+   int C = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int minusminuscost = 1;
+   src--;
+   C = C + minusminuscost; // increment C for decrement
+   dest--;
+   C = C + minusminuscost; // increment C for decrement
+   
+   while(size > 0) {
+      C = C + comparisoncost; //increment C for comparison
+      dest++;
+      C = C + pluspluscost; //increment C for increment
+      src++;
+      C = C + pluspluscost; //increment C for increment
+      *dest = *src;
+      C = C + assigncost; //increment C for assigning in an array
+      size--;
+      C = C + minusminuscost; //increment C for decrement 
+   }
+   C = C + comparisoncost; //increment C for exit loop
+   return C;
+}
+

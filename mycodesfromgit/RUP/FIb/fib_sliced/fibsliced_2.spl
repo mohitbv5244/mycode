@@ -1,0 +1,25 @@
+/*@ rel_out \result <= \other \result  @*/
+
+
+int fib(int n) {
+  int f = 0;  
+  int g = 1;
+  int h = 0;
+  int C = 0;
+  int comparisoncost = 2;
+  int minusminuscost = 1;
+  int pluscost = 1;
+  n--;
+  while(n > 0) {
+    C = C + comparisoncost; // increment C variable for comparison
+    //h = f + g;
+    C = C + pluscost; //increment C variable for addition
+    //f = g;
+    //g = h;
+    n --;
+    C = C + minusminuscost; //increment C variable for decrement
+  }
+  C = C + comparisoncost; // increment C variable for exit loop
+
+  return C;
+} 

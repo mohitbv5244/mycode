@@ -1,0 +1,48 @@
+int calculator(int a, int b, int option) 
+{ 
+   int C = 0;
+   int result = 0;
+   int i = 0;
+   int comparisoncost = 2;
+   int pluscost = 1;
+   int minuscost = 1;
+   int multiplicationcost = 3;
+   int divisioncost = 4;
+  
+   if(a != 0){
+     C = C + comparisoncost; //increment C for comparison
+
+    if(option == 1){
+       C = C + comparisoncost; //increment C for comparison
+       result = a + b;
+       C = C + pluscost; //increment C for addition
+
+   }
+   else 
+   if(option == 2){
+       C = C + comparisoncost; //increment C for comparison
+       result = a - b;
+       C = C + minuscost; //increment C for subtraction
+   }
+   else 
+   if(option == 3){
+       C = C + comparisoncost; //increment C for comparison
+       result = a * b;
+       C = C + multiplicationcost; //increment C for multiplication
+   }
+   else{
+       C = C + comparisoncost; //increment C for comparison
+       result = a / b;
+       C = C + divisioncost; //increment C for division
+   }
+   C = C + comparisoncost; //increment C for comparison
+
+   
+  
+  }
+   C = C + comparisoncost; //increment C for comparison
+
+   return C;
+}    
+
+

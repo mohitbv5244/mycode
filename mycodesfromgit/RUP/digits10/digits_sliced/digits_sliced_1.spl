@@ -1,0 +1,22 @@
+int f(int n) {
+
+  int result = 1;
+  int C = 0;
+  int comparisoncost = 2;
+  int divisioncost = 4;
+  int pluspluscost = 1;
+
+  n = n / 10;
+  C = C + divisioncost; //increment C for division 
+
+  while (n > 0) {
+    C = C + comparisoncost; //increment C for comparison
+    //result++;
+    C = C + pluspluscost; //increment C for increment 
+    n = n / 10;
+    C = C + divisioncost; //increment C for division 
+  }
+  C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+

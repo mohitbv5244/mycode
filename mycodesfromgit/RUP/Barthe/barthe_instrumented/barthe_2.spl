@@ -1,0 +1,36 @@
+/*@ rel_out \result <= \other \result  @*/
+
+int f(int n) {
+  int i = 1;
+  int x = 1;
+  int C = 0;
+  int pluspluscost = 1;
+  int multiplicationcost = 3;
+  int comparisoncost = 2;
+  int pluscost = 1;
+
+
+  while (i <= n) {
+    C = C + comparisoncost; // increment C variable for comparison
+    x = x * 5;
+    C = C + multiplicationcost; //increment C variable for multiplication
+    i++;
+    C = C + pluspluscost; //increment C variable for increment
+  }
+   C = C + comparisoncost; // increment C variable for comparison after exit of loop
+
+  i = 1;
+
+ while (i <= n) {
+    C = C + comparisoncost; // increment C variable for comparison
+    x = x + i;
+    C = C + pluscost; //increment C variable for instruction
+    i++;
+    C = C + pluspluscost; //increment C variable for increment
+  }
+   C = C + comparisoncost; // increment C variable for comparison after exit of loop
+
+  return C; 
+
+ 
+}

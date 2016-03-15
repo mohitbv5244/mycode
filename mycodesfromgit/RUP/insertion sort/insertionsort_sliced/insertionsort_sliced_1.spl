@@ -1,0 +1,46 @@
+
+int insertionsort(int *a, int n) {
+
+   int i = 1;
+   int j = 0;
+   int C = 0;
+   int t = 0;
+   int comparisoncost = 2;
+   int andcost = 3;
+   int assigncost = 2; 
+   int pluscost = 1;
+   int pluspluscost = 1;
+   int minuscost = 1;
+   int readingcost = 1;
+
+   while(i < n) {
+      C = C + comparisoncost; //increment C for comparison
+      t = a[i];
+      j = i - 1;
+      C = C + minuscost; //increment C for decrement
+      while((t <= a[j]) &&(j >= 0)){
+            C = C + readingcost; //increment C for reading from an array
+            C = C + comparisoncost; //increment C for comparison
+            C = C + andcost; //increment C for AND operation
+            C = C + comparisoncost; //increment C for comparison
+            a[j + 1] = a[j];
+            C = C + pluscost; //increment C for addition
+            C = C + assigncost; //increment C for assigning
+            j = j - 1;
+            C = C + minuscost; //increment C for decrement
+            }
+            C = C + readingcost; //increment C for reading from an array
+            C = C + comparisoncost; //increment C for comparison
+            C = C + andcost; //increment C for AND operation
+            C = C + comparisoncost; //increment C for comparison
+         a[j + 1] = t;
+         C = C + pluscost; //increment C for addition
+      }
+      i++;
+      C = C + pluspluscost; //increment C for increment
+   C = C + comparisoncost; //increment C for exit loop
+   return C;
+}
+
+
+

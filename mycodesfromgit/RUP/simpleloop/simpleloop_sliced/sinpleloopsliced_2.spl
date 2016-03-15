@@ -1,0 +1,19 @@
+/*@ rel_out \result <= \other \result  @*/
+
+int f(int z) {
+  int i = 1;
+  int C = 0;
+  int pluspluscost = 1;
+  int comparisoncost = 2;
+
+  while (i <= 10) {
+    C = C + comparisoncost; // increment C variable for comparison
+    i++;
+    C = C + pluspluscost; //increment C variable for instruction
+  }
+  C = C + comparisoncost; // increment C variable for exit loop
+
+  return C;
+}
+
+

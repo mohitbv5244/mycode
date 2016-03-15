@@ -1,0 +1,45 @@
+int binarysearch(int *a, int search, int n) {
+
+   int first = 0;
+   int last = n - 1;
+   int middle = (first + last)/2;
+   int found = 0;
+   int C = 0;
+   int comparisoncost = 2;
+   int pluscost = 1;
+   int minuscost = 1;
+   int divisioncost = 4;
+   int readingcost = 2;
+
+   while(first <= last) {
+         C = C + comparisoncost; //increment C for comparison
+         middle = (first + last) / 2;
+         C = C + divisioncost;//increment C for divison
+         C = C - pluscost;//increment C for addition
+         if(a[middle] < search){
+            C = C + readingcost; // increment C for reading in an array
+            C = C + comparisoncost; //increment C for comparison
+            first = middle + 1;
+            C = C + pluscost; //increment C for increment
+         }
+         else if(a[middle] == search){
+            C = C + readingcost; // increment C for reading in an array
+            C = C + comparisoncost; //increment C for comparison
+            //found = 1;
+         }
+         else if (a[middle] > search){
+             C = C + readingcost; // increment C for reading in an array
+             C = C + comparisoncost; //increment C for comparison
+             last = middle - 1;
+             C = C + minuscost; //increment C for decrement
+             }
+         C = C + readingcost; // increment C for reading in an array
+         C = C + comparisoncost; //increment C for comparison
+      }
+      C = C + comparisoncost; //increment C for exit loop
+     return C;
+}
+
+
+
+

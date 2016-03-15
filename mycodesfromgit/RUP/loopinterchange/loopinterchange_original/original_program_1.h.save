@@ -1,0 +1,91 @@
+int* loopinterchange1(int n1, int n2, int a[ ][2], int b[ ][2], int c[ ][2]){
+
+   int i = 0;
+   int j = 0;
+   int *d =(int *)malloc(sizeof(int)* n1);
+   d = a;
+   int *e =(int *)malloc(sizeof(int)* n1);
+   e = b;
+   int *f =(int *)malloc(sizeof(int)* n1);
+   f = c;
+  
+
+for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", a[i,j]);
+     }
+     printf("\n");
+     }
+for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", b[i,j]);
+     }
+     printf("\n");
+     }
+for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", c[i,j]);
+     }
+     printf("\n");
+     }
+printf("2-----------------------------------------------\n");
+
+
+
+
+
+
+ 
+     while(i < n1){
+  
+            while(j < n2){
+            
+            d[i,j] = e[i,j];
+        
+            j++;
+      
+            }
+           
+            i++;
+       
+            }
+
+for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", d[i,j]);
+     }
+     printf("\n");
+     }
+
+     for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", e[i,j]);
+     }
+     printf("\n");
+     }
+
+       for(i = 0; i < 2; i++){
+  for(j = 0; j < 2; j++){
+     printf("\t%d", f[i,j]);
+     }
+     printf("\n");
+     }
+
+printf("3----------------------------------------\n");
+
+
+
+
+
+
+
+           return f;
+
+
+}
+
+
+
+
+
+

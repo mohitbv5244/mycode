@@ -1,0 +1,35 @@
+int* loopinterchange2(int n1, int n2, int *a, int *b, int *c){
+
+   int i = 0;
+   int j = 0;
+   int *d =(int *)malloc(sizeof(int)* n1);
+   d = a;
+   int *e =(int *)malloc(sizeof(int)* n1);
+   e = b;
+   int *f =(int *)malloc(sizeof(int)* n1);
+   f = c;
+ 
+
+
+     while(j < n2){
+ 
+            while(i < n1){
+            
+            f[i,j] = d[i,j] + e[i,j];
+             
+            i++;
+            
+            }
+            
+            j++;
+           
+            }
+            
+           return f;
+}
+
+
+
+
+
+

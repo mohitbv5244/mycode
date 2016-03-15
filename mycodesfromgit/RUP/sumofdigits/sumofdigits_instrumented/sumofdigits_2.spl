@@ -1,0 +1,23 @@
+/*@ rel_out \result <= \other \result @*/
+int sumofdigits(int n){
+
+  int sum = 0;
+  int C = 0;
+  int pluscost = 1;
+  int moduluscost = 2;
+  int divisioncost = 4;
+  int comparisoncost = 2;
+    
+ while(n != 0){
+      C = C + comparisoncost; //increment C for comparison
+      //sum = sum + (n % 10);
+      C = C + pluscost; //increment C for addition
+      C = C + moduluscost; //increment C for modulus
+      n = n / 10;  
+      C = C + divisioncost; //increment C for division
+      }
+      C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+
+

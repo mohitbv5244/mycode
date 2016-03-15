@@ -1,0 +1,47 @@
+/*@ rel_out \result <= \other \result @*/
+
+int selsort(int *a, int n) {
+   
+   int i = 0;
+   int j = i + 1;
+   int t = 0;
+   int position = 0;
+   int C = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int minuscost = 1;
+   int readingcost = 2;
+
+   while(i < (n - 1)) {
+      C = C + minuscost; //increment C for subtraction
+      C = C + comparisoncost; //increment C for comparison
+      position = i;
+      while(j < n) {
+         C = C + comparisoncost; //increment C for comparison
+                   if(a[position] > a[j]) {
+                   C = C + readingcost;//increment C for reading in an array
+                   C = C + comparisoncost; //increment C for comparison
+                   position = j;
+                   }
+                   C = C + readingcost;//increment C for reading in an array
+                   C = C + comparisoncost; //increment C for comparison
+                   j++;
+                   C = C + pluspluscost; //increment C for increment
+                   }
+                   C = C + comparisoncost; //increment C for comparison
+           if(position!=i){
+            C = C + comparisoncost; //increment C for comparison
+            t = a[i];
+            a[i] = a[position];
+            C = C + assigncost; // increment C for assigning in an array
+            a[position] = t; 
+          }
+          C = C + comparisoncost; //increment C for comparison
+      i++;
+      C = C + pluspluscost; //increment C for increment
+   }
+   C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+

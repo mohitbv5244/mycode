@@ -1,0 +1,5 @@
+Elapsed Time: 1.265 seconds
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) :- (((E + (H + ((-1 * M) - P))) = 0); (((A - B) >= 1); (I >= J))).
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

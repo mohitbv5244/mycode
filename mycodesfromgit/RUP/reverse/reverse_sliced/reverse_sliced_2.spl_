@@ -1,0 +1,27 @@
+
+/*@ rel_out \result == \other \result @*/
+
+int reverse(int number){
+
+
+ int C = 0;
+ int comparisoncost = 2;
+ int pluscost = 1;
+ int moduluscost = 2;
+ int multiplicationcost = 3;
+ int divisioncost = 4;
+ int pluspluscost = 1;
+ int rev = 0;
+
+   while(number != 0){
+     C = C + comparisoncost; //increment C for comparison
+     //rev = (rev * 10) + (number % 10);
+     C = C + multiplicationcost; //increment C for multiplication
+     C = C + pluscost; //increment C for addition
+     C = C + moduluscost; //increment C for modulus
+     number = number / 10; 
+     C = C + divisioncost; //increment C for division
+  }
+  C = C + comparisoncost; //increment C for exit loop
+  return C;
+}

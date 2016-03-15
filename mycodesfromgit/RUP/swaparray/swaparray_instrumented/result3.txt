@@ -1,0 +1,7 @@
+Elapsed Time: 4.571 seconds
+unknown
+
+0: FALSE -> 1
+1: INV1(1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 1, 2)
+
+Verdict: Equivalence between the programs could not be proved (nor disproved).

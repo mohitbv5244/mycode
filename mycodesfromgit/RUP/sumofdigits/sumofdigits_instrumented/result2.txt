@@ -1,0 +1,9 @@
+Elapsed Time: 1.264 seconds
+
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) :- (((A = I), ((D + (H + ((-1 * K) - O))) = 0)), 
+((E + (F + (G + (H + ((((-1 * N) - O) - M) - L))))) = 0)).
+
+
+
+

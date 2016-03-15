@@ -1,0 +1,4 @@
+(templates INV1
+((n_1_1 Int) (i_1_2 Int) (g_1_2 Int) (constant_1_2 Int) (pluspluscost_1_2 Int) (multiplicationcost_1_2 Int) (comparisoncost_1_2 Int)(n_2_1 Int) (i_2_2 Int) (g_2_2 Int) (constant_2_2 Int) (pluspluscost_2_2 Int) (multiplicationcost_2_2 Int) (comparisoncost_2_2 Int))
+(term (= n_1_1 n_2_1) 1) (term n_1_1 10) (term n_2_1 10)  (term (= i_1_2 i_2_2) 1)  (term i_1_2 10) (term i_2_2 10)  (term (= g_1_2 g_2_2) 1)  (term g_1_2 10) (term g_2_2 10)  (term (= constant_1_2 constant_2_2) 1)  (term constant_1_2 10) (term constant_2_2 10)  (term (= pluspluscost_1_2 pluspluscost_2_2) 1)  (term pluspluscost_1_2 10) (term pluspluscost_2_2 10)  (term (= multiplicationcost_1_2 multiplicationcost_2_2) 1)  (term multiplicationcost_1_2 10) (term multiplicationcost_2_2 10)  (term (= comparisoncost_1_2 comparisoncost_2_2) 1)  (term comparisoncost_1_2 10) (term comparisoncost_2_2 10) 
+)

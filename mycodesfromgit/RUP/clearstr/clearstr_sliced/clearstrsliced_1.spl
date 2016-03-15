@@ -1,0 +1,21 @@
+int clearstr(int *a) {
+   int i = 0;
+   int C = 0;
+   int comparisoncost = 2;
+   int pluspluscost = 1;
+   int readingcost = 2;
+   int assigncost = 2;
+ 
+   while(a[i] != 0) {
+      C = C + readingcost; // increment C for reading in an array
+      C = C + comparisoncost; // increment C for comparison
+      a[i] = 0;
+      C = C + assigncost; // increment C for asssigning in an array
+      i++;
+      C = C + pluspluscost;// increment C for i variable increment
+   }
+   C = C + readingcost; // increment C for exit while loop
+   C = C + comparisoncost;// increment C for exit while loop
+   return C;
+}
+

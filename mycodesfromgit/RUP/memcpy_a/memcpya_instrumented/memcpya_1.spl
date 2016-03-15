@@ -1,0 +1,17 @@
+int memcpy(int *dest, int *src, int size) {
+   int i = 0;
+   int C = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   while(i < size) {
+      C = C + comparisoncost; //increment C for comparison
+      dest[i] = src[i];
+      C = C + assigncost; //increment C for assigning
+      i++;
+      C = C + pluspluscost; //increment C for increment 
+   }
+   C = C + comparisoncost; //increment C for exit loop
+   return C;
+}
+

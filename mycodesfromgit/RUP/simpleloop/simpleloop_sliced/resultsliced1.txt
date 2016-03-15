@@ -1,0 +1,6 @@
+
+Elapsed Time: 0.945 seconds
+sat
+inv1(A,B,C,D,E,F,G,H,I,J) :- (B =< 0).
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

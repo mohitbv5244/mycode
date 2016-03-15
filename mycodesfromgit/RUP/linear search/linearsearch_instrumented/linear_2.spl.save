@@ -1,0 +1,49 @@
+/*@ rel_out \result >= \other \result @*/
+
+int linearsearch(int *a, int n, int search) {
+
+   int i = 0;
+   int found = 0;
+   int comparisoncost = 2;
+   int pluspluscost = 1;
+   
+   while(i < n) {
+         C = C + comparisoncost; //increment C for comparison
+         if(a[i] == search) {
+            C = C + comparisoncost; //increment C for comparison
+            found = 1;
+            //break;
+         }
+         C = C + comparisoncost; //increment C for exit loop
+      }
+      C = C + comparisoncost; //increment C for exit loop
+      i++;
+      C = C + pluspluscost; //increment C for increment
+     return C;
+
+}
+
+
+int linearsearch(int *a, int n, int search) {
+
+   int i = 0;
+   int found = 0;
+   int comparisoncost = 2;
+   int pluspluscost = 1;
+   
+   while(i <= n) {
+         C = C + comparisoncost; //increment C for comparison
+         if(a[i] == search) {
+            C = C + comparisoncost; //increment C for comparison
+            found = 1;
+            //break;
+         }
+         C = C + comparisoncost; //increment C for exit loop
+      }
+      C = C + comparisoncost; //increment C for exit loop
+      i++;
+      C = C + pluspluscost; //increment C for increment
+     return C;
+
+}
+

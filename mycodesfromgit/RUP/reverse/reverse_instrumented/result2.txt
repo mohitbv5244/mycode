@@ -1,0 +1,4 @@
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) :- (((A = J), ((B + ((((((M + (N + (O + P))) - K) - G) - F) - E) - D)) = 0)), ((C + (D + (E + (F + (G + (((((-1 * O) - P) - N) - M) - L)))))) = 0)).
+
+Elapsed time : 1.6

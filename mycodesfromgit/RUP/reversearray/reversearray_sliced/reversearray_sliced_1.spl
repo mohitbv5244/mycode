@@ -1,0 +1,26 @@
+int reversearray(int n, int *a){
+
+   int i = 0;
+   int j = i - 1;
+   int C = 0;
+   int comparisoncost = 2;
+   int minusminuscost = 1;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int t = 0;
+
+
+     while(i < j){
+        C = C + comparisoncost; //increment C for comparison
+        t = a[i]; 
+        a[i] = a[j];
+        C = C + assigncost;// increment C for assigning in an array 
+        a[j] = t; 
+        i++;
+        C = C + pluspluscost; //increment C for increment
+        j--;
+        C = C + minusminuscost; //increment C for decrement
+     }
+     C = C + comparisoncost; //increment C for exit loop
+     return C;
+}

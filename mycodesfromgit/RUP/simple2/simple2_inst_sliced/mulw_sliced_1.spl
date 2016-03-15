@@ -1,0 +1,28 @@
+
+
+int mul(int n)
+{
+  int i = 0;
+  int g = 0;
+  int constant = 0;
+  int C = 0;
+  int pluspluscost = 1;
+  int multiplicationcost = 3;
+  int comparisoncost = 2;
+  
+
+  while(i < n){
+   C = C + comparisoncost; // increment C variable for comparison 
+   //g = g * 1;
+   C = C + multiplicationcost; //increment C variable for multiplication
+   //constant++;
+   C = C + pluspluscost; //increment C variable for increment   
+   //i++;
+   C = C + pluspluscost; //increment C variable for increment
+   }
+   C = C + comparisoncost; // increment C variable for exit loop 
+ return C;
+}
+
+
+ 

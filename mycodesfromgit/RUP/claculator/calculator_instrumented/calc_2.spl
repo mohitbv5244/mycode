@@ -1,0 +1,48 @@
+/*@ rel_out \result <= \other \result @*/
+
+int calculator(int a, int b, int option) 
+{
+   int C = 0;
+   int i = 0;
+   int comparisoncost = 2;
+   int pluscost = 1;
+   int minuscost = 1;
+   int multiplicationcost = 3;
+   int divisioncost = 4;
+   int pluspluscost = 1;
+
+   if(a != 0){
+      C = C + comparisoncost; //increment C for comparison
+   if(option == 1){
+        C = C + comparisoncost; //increment C for comparison
+        a = a + b;
+        C = C + pluscost; //increment C for addition
+   }
+   else 
+   if(option == 2){
+        C = C + comparisoncost; //increment C for comparison
+        a = a - b;
+        C = C + minuscost; //increment C for subtraction
+   }
+   else 
+   if(option == 3){
+        C = C + comparisoncost; //increment C for comparison
+        a = a * b;
+        C = C + multiplicationcost; //increment C for multiplication
+   }
+   else{
+        C = C + comparisoncost; //increment C for comparison
+        a = a / b;
+        C = C + divisioncost; //increment C for division
+   }
+   C = C + comparisoncost; //increment C for comparison
+
+   i++;
+   C = C + pluspluscost; //increment C for increment
+
+}
+C = C + comparisoncost; //increment C for comparison
+
+   return C;
+
+} 

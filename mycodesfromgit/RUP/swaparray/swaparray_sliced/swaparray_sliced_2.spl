@@ -1,0 +1,36 @@
+
+/*@ rel_out \result <= \other \result @*/
+
+int swap(int *a, int *b, int n) {
+   int *start = a;
+   int C = 0;
+   int pluspluscost = 1;
+   int assigncost = 2;
+   int minuscost = 1;
+   int pluscost = 1;
+   int comparisoncost = 2;
+
+   while(a-start < n) {
+      C = C + minuscost; //increment C for subtraction
+      C = C + comparisoncost; // increment C variable for comparison
+      //*a = *a+*b;
+      C = C + pluscost; //increment C for addition
+      C = C + assigncost; // increment C variable for assigning in an array
+      //*b = *a-*b;
+      C = C + minuscost; //increment C for subtraction
+      C = C + assigncost; // increment C variable for assigning in an array
+      //*a = *a-*b;
+      C = C + minuscost; //increment C for subtraction
+      C = C + assigncost; // increment C variable for assigning in an array
+      a++;
+      C = C + pluspluscost; //increment C variable for increment
+      //b++;
+      C = C + pluspluscost; //increment C variable for increment
+   }
+   C = C + minuscost; //increment C variable for exit
+   C = C + comparisoncost; // increment C variable for exit
+   return C;
+}
+
+
+

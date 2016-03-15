@@ -1,0 +1,51 @@
+
+int bubblesort(int *a, int n) {
+
+   int j = 0;
+   int i = 0;
+   int C = 0;
+   int t = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int pluscost = 1;
+   int minuscost = 1;
+   int readingcost = 2;
+
+   while(i < n - 1) {
+      C = C + minuscost;//increment C for subtraction
+      C = C + comparisoncost; //increment C for comparison
+      while(j < n - i - 1) {
+         C = C + minuscost;//increment C for subtraction
+         C = C + minuscost;//increment C for subtraction
+         C = C + comparisoncost; //increment C for comparison
+         if(a[j] >= a[j + 1]) {
+            C = C + readingcost;//increment C for reading in an array
+            C = C + pluscost;//increment C for addition
+            C = C + comparisoncost; //increment C for comparison
+            C = C + readingcost;//increment C for reading in an array
+            t = a[j];
+            a[j] = a[j + 1];
+            C = C + pluscost;//increment C for addition
+            C = C + assigncost; //increment C for assigning in an array
+            a[j + 1] = t;
+            C = C + pluscost; //increment C for addition
+         }
+         C = C + readingcost;//increment C for reading in an array
+         C = C + pluscost;//increment C for addition
+         C = C + comparisoncost; //increment C for exit loop
+         C = C + readingcost;//increment C for reading in an array
+         j++;
+         C = C + pluspluscost; //increment C for increment
+      }
+      C = C + minuscost;//increment C for subtraction
+      C = C + minuscost;//increment C for subtraction
+      C = C + comparisoncost; //increment C for exit loop
+      i++;
+      C = C + pluspluscost; //increment C for increment
+   }
+   C = C + minuscost;//increment C for subtraction
+   C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+

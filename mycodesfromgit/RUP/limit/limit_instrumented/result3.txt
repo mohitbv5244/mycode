@@ -1,0 +1,10 @@
+
+sat
+rec__f(A,B,C) :- 1 = 1.
+rec_f_(A,B,C) :- ((A - C) >= 2).
+rec_f_f(A,B,C,D,E,F) :- (((A + ((F - D) - C)) >= 0); ((E - B) >= 2)).
+
+Elapsed Time: 0.603s
+
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

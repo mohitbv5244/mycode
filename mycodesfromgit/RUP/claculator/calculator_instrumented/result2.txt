@@ -1,0 +1,6 @@
+Elapsed Time: 1.917 seconds
+unsat
+
+0: FALSE
+
+Verdict: A DIFFERENCE between the two programs has been detected!

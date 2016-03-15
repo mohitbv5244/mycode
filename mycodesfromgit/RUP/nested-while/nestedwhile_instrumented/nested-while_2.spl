@@ -1,0 +1,28 @@
+/*@ rel_out \result <= \other \result @*/
+
+int f(int x, int g) {
+  int i = 0;
+  int C = 0;
+  int comparisoncost = 2;
+  int pluscost = 1;
+  int minuscost = 1;
+
+  while (i < x) { 
+    C = C + comparisoncost; //increment C for comparison
+    i = i + 1;
+    C = C + pluscost; //increment C for addition
+    g = g - 1;
+    C = C + minuscost; //increment C for subtraction
+    while(x < i) {
+      C = C + comparisoncost; //increment C for comparison
+      x = x + 1;
+      C = C + pluscost; //increment C for addition
+      g = g + 1;
+      C = C + pluscost; //increment C for addition
+    }
+    C = C + comparisoncost; //increment C for exit
+  }
+  C = C + comparisoncost; //increment C for exit
+  return C;
+}
+

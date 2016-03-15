@@ -1,0 +1,24 @@
+ /*@ rel_out \result >= \other \result @*/
+
+int memcpy(int *dest, int *src, int size) {
+   
+   int C = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int *start = src;
+   
+   while(size > 0) {
+      *dest = *src;
+      C = C + traversecost; //increment C for traversing
+      C = C + comparisoncost; //increment C for comparison
+      dest++;
+      C = C +
+ pluspluscost; //increment C for increment
+      src++;
+      C = C + pluspluscost; //increment C for increment
+      }
+   C = C + comparisoncost; //increment C for exit
+   return C;
+}
+

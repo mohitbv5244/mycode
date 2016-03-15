@@ -1,0 +1,48 @@
+/*@ rel_out \result <= \other \result @*/
+
+int bubblesort(int *a, int n) {
+
+   int j = 0;
+   int i = n -2;
+   int C = 0;
+   int t = 0;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   int minusminuscost = 1;
+   int pluscost = 1;
+   int readingcost = 2;
+
+   while(i >= 0) {
+      C = C + comparisoncost; //increment C for comparison
+      while(j <= i) {
+            C = C + comparisoncost; //increment C for comparison
+            if(a[j] > a[j + 1]) {
+            C = C + readingcost;//increment C for reading in an array
+            C = C + pluscost;//increment C for addition
+            C = C + comparisoncost; //increment C for comparison
+            C = C + readingcost;//increment C for reading in an array
+            t = a[j];
+            a[j] = a[j + 1];
+            C = C + pluscost; //increment C for addition
+            C = C + assigncost; //increment C for assigning in an array
+            a[j + 1] = t;
+            C = C + pluscost; //increment C for additon
+         }
+         C = C + readingcost;//increment C for reading in an array
+         C = C + pluscost; //increment C for addition
+         C = C + comparisoncost; //increment C for exit loop
+         C = C + readingcost;//increment C for reading in an array
+         j++;
+         C = C + pluspluscost; //increment C for increment
+      }
+      C = C + comparisoncost; //increment C for exit loop
+      i--;
+      C = C + minusminuscost; //increment C for decrement
+   }
+   C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+
+
+

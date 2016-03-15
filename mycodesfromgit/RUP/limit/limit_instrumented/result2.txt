@@ -1,0 +1,9 @@
+unsat
+
+0: FALSE -> 1
+1: REC_f_(0, 0, -2)
+
+Elapsed time: 0.560s
+
+
+Verdict: A DIFFERENCE between the two programs has been detected!

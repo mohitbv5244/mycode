@@ -1,0 +1,10 @@
+unsat
+
+0: FALSE -> 1
+1: REC_f_(0, 0, -2)
+
+
+
+
+Elapsed Time: 0.511s
+

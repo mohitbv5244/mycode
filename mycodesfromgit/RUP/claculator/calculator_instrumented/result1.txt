@@ -1,0 +1,4 @@
+Elapsed Time: 1.998 seconds
+sat
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

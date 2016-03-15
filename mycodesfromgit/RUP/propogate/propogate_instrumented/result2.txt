@@ -1,0 +1,5 @@
+Elapsed Time: 2.851 seconds
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T) :- ((((D + ((O - N) - E)) = 0), ((F + (((((R + (S + T)) - P) - J) - I) - H)) = 0)), ((G + (H + (I + (J + ((((-1 * S) - T) - R) - Q))))) = 0)).
+
+Verdict: PROGRAMS HAVE BEEN PROVED EQUIVALENT.

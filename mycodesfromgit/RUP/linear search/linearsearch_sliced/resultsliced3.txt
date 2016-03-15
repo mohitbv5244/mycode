@@ -1,0 +1,5 @@
+sat
+inv1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W) :- ((((D + ((Q - O) - F)) >= 0), ((D - F) >= 1)); (((D + ((Q - O) - F)) >= 0), ((H + (I + (J + ((-1 * S) - U)))) >= 1))).
+
+Elapsed time: 2.698s
+

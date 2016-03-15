@@ -1,0 +1,38 @@
+
+int selsort(int *a, int n) {
+
+   int j = 0;
+   int i = 0;
+   int C = 0;
+   int t = 0;
+   int readingcost = 2;
+   int comparisoncost = 2;
+   int assigncost = 2;
+   int pluspluscost = 1;
+   while(i < n) {
+      C = C + comparisoncost; //increment C for comparison
+      j = i;
+      while(j < n) {
+         C = C + comparisoncost; //increment C for comparison
+         if(a[j] <= a[i]) {
+            C = C + readingcost;//increment C for reading in an array
+            C = C + comparisoncost; //increment C for comparison
+            t = a[i];
+            a[i] = a[j];
+            C = C + assigncost; // increment C for assigning in an array
+            a[j] = t;
+           }
+          C = C + readingcost;//increment C for reading in an array
+          C = C + comparisoncost; //increment C for comparison
+         j++;
+         C = C + pluspluscost; //increment C for increment
+      }
+      C = C + comparisoncost; //increment C for comparison
+      i++;
+      C = C + pluspluscost; //increment C for increment
+   }
+   C = C + comparisoncost; //increment C for exit loop
+  return C;
+}
+
+

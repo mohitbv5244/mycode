@@ -1,0 +1,28 @@
+/*@ rel_out \result <= \other \result  @*/
+
+int f(int n, int C) {
+
+  int r = 0;
+  int comparisoncost = 1;
+  int recursioncost = 4;
+  int pluscost = 1;
+  int minuscost = 1;
+ 
+
+  if (n <= 1) {
+    C = C + comparisoncost; // increment C variable for comparison
+    //r = n;
+  }  
+   
+    else {
+    C = C + comparisoncost; // increment C variable for comparison
+    C = f(n - 1, C);
+    C = C + minuscost; //increment C variable for subtraction
+    C = C + recursioncost; //increment C variable for recursion
+    //r = n + r;
+    C = C + pluscost; //increment C variable for addition 
+  }
+  C = C + comparisoncost; // increment C variable for exit loop
+  return C;
+}
+
